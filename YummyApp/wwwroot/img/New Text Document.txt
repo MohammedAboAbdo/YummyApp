@@ -1,0 +1,4 @@
+<i class="fa fa-pencil" aria-hidden="true"></i>
+<i class="fa fa-sliders" aria-hidden="true"></i>
+<i class="fa fa-link" aria-hidden="true"></i>
+<i class="fa fa-laptop" aria-hidden="true"></i>

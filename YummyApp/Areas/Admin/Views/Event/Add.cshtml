@@ -1,0 +1,63 @@
+﻿@model AddEventVM
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label asp-for="Title">
+        </label>
+        <input type="text" class="form-control" asp-for="Title" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">
+        </label>
+        <input type="number" class="form-control" asp-for="Price" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Date">
+        </label>
+        <input type="text" autocomplete="off" class="form-control datepicker" asp-for="Date" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ShortDesc">
+        </label>
+        <textarea asp-for="ShortDesc" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="Image">
+        </label>
+        <input type="file" asp-for="Image" multiple>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+@section Scripts
+{
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
+
+<script>
+    $(document).ready(function(){
+       $('.datepicker').datepicker({
+           orientation: "bottom",
+           format: "dd/mm/yyyy"
+           startDate: 1800,
+           endDate: 2050,
+           clearBtn: true,
+           language: "ar"
+       });
+    });
+
+
+    ClassicEditor
+        .create( document.querySelector( '#ShortDesc' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+
+</script>
+}

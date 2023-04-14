@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@inject IViewLocalizer _localizer
+
+<h1>
+    Admin Dashboard Page
+</h1>
+
+@ViewBag.Welcome
+
+<hr />
+
+@Html.Raw("<h1>TEST</h1>");
+
+<hr />
+
+Date : @DateTime.Now
+
+<hr />
+
+@_localizer["Welcome"]

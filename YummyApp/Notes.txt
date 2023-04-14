@@ -1,0 +1,54 @@
+﻿1.Db
+2.Area -> Admin, chef ( MVC Area Visual Studio Add Area)
+3.Identity User ( Application User)
+	1. Create A new class (ApplicationUser.cs)
+	2. ApplicationUser : IdentityUser
+	3. ApplicationDbContext => IdentityDbContext<ApplicationUser>
+	4. Program.cs
+		AddIdentity<ApplicationUser, IdentityRole>
+	5.Add-migration 
+	6.update-database
+
+
+4. ApplicationUser -> Enum (UserTypes)
+5. ImageName -> optionial 
+6. Models
+	Contact
+	Menu
+	Meals
+	Gallery (Photo, PhotoAlbum)
+7.Seed ( Add Defualt Values for Menu)
+
+
+
+=-=-=-=-=
+
+1. Seed Role ( ApplicationDbContext)
+2. Seed Admin User ( ApplicationDbContext)
+3. Seed Assign Role To Admin User (ApplicationDbContext)
+
+
+4. Program.cs
+	1.Change LoginPath
+	2.Change Denied
+	(ConfigureApplicationCookie -Options)
+5.AdminBaseController
+	1.Authorize (Role = "Administrator")
+6. Login Page
+	1.Form to submit Login View Model
+	2. ReturnUrl
+7. SignOut
+8. SignInManager , UserManager  -> To manage AspNetUser (Application Users)
+
+
+
+
+
+
+===
+
+Program.cs 
+	- changes : 
+		// AddLocatizationService
+		// Congfiure -> request
+		// Middleware options request

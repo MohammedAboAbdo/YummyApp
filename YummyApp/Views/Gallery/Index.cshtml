@@ -1,0 +1,27 @@
+﻿@model List<PhotoAlbum>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!-- ======= Gallery Section ======= -->
+<section id="gallery" class="gallery section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+            <h2>gallery</h2>
+            <p>Check <span>Our Gallery</span></p>
+        </div>
+        <div class="Gallery">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <a asp-action="Photos" asp-route-id="@item.Id" asp-area="" asp-controller="Gallery">
+                        @item.Title
+                    </a>
+                }
+            </ul>
+        </div>
+
+    </div>
+</section><!-- End Gallery Section -->
